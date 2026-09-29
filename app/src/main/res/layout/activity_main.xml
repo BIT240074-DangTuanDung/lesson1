@@ -10,40 +10,38 @@
     <TextView
         android:id="@+id/box1"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_margin="4dp"
+        android:layout_height="100dp"
+        android:layout_margin="6dp"
         android:background="@color/blue_box"
         android:gravity="center"
         android:text="1"
         android:textColor="@color/white"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/box2"
-        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintWidth_percent="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/box2"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_margin="4dp"
+        android:layout_height="100dp"
+        android:layout_margin="6dp"
         android:background="@color/red_box"
         android:gravity="center"
         android:text="2"
         android:textColor="@color/white"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/box1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box1" />
 
     <TextView
         android:id="@+id/box3"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:layout_margin="4dp"
+        android:layout_margin="6dp"
         android:background="@color/yellow_box"
         android:gravity="center"
         android:text="3"
@@ -53,39 +51,55 @@
         app:layout_constraintEnd_toStartOf="@+id/box4"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/box1" />
+        app:layout_constraintTop_toBottomOf="@+id/box2" />
 
     <TextView
         android:id="@+id/box4"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="5dp"
         android:background="@color/green_box"
         android:gravity="center"
         android:text="4"
         android:textColor="@color/white"
         android:textSize="48sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/box6"
         app:layout_constraintEnd_toStartOf="@+id/box5"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/box3"
-        app:layout_constraintTop_toBottomOf="@+id/box1" />
+        app:layout_constraintTop_toBottomOf="@+id/box2" />
 
     <TextView
         android:id="@+id/box5"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_margin="4dp"
+        android:layout_marginBottom="5dp"
         android:background="@color/purple_box"
         android:gravity="center"
         android:text="5"
         android:textColor="@color/white"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintBottom_toTopOf="@+id/box6"
+        app:layout_constraintEnd_toStartOf="@+id/spacer"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/box4"
-        app:layout_constraintTop_toBottomOf="@+id/box2" />
+        app:layout_constraintTop_toBottomOf="@+id/box2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/spacer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/box5"
+        app:layout_constraintTop_toTopOf="@+id/box5" />
 
     <TextView
         android:id="@+id/box6"
